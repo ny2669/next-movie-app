@@ -6,7 +6,7 @@ import Hero from "../components/Hero";
 import ThumbNail from "../components/ThumbNail";
 import Text from "../components/Text";
 import TVshows from '../components/Tv';
-
+import 'core-js/actual';
 
 
 export default function Home({movies, shows}){
