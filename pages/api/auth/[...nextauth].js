@@ -1,38 +1,17 @@
-import NextAuth from "next-auth"
+// import NextAuth from "next-auth"
 
-import GoogleProvider from "next-auth/providers/google";
+// import GoogleProvider from "next-auth/providers/google";
 
 
-export default NextAuth({
-    // Configure one or more authentication providers
-    providers: [
-        GoogleProvider({
-          clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
-          clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET,
+// export default NextAuth({
+//     // Configure one or more authentication providers
+//     providers: [
+//         GoogleProvider({
+//           clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
+//           clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET,
          
-        })
-      ],
-      jwt: {
-        encryption: true,
-      },
-      secret: process.env.SECRET,
-      callbacks: {
-        async jwt(token, account) {
-          if (account?.accessToken) {
-            token.accessToken = account.accessToken;
-          }
-          return token;
-        },
-        redirect: async (url, _baseUrl) => {
-          if (url === '/profile') {
-            return Promise.resolve('/');
-          }
-          return Promise.resolve('/');
-        },
-
-
-      }
-
-  
-  })
+//         })
+//       ],
+     
+//   })
 
