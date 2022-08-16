@@ -1,7 +1,7 @@
 
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+
 import Hero from "../components/Hero";
 import ThumbNail from "../components/ThumbNail";
 import Text from "../components/Text";
