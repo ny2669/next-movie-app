@@ -59,7 +59,7 @@ export default function Details({movie}) {
   return(
 <section className='darkBg'>
 
-<Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path || movie.poster_path}`} alt={movie.title} layout='fill' objectFit="cover" objectPosition={'center'} className='bd-img'/>
+<Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path || movie.poster_path}`} alt={movie.title} layout='fill' objectFit="fill" objectPosition={'center'} className='bd-img'/>
     <div className="detailImg">
 
 <h1 className="detailsTitle" key={movie.id}>{movie.title}</h1>

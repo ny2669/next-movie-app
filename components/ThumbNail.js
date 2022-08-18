@@ -1,8 +1,5 @@
-import React, {useContext} from 'react'
-import Image from "next/image";
-import { useRouter } from 'next/router'
 import Link from 'next/link';
-import { Context } from './Context';
+
 
 
 

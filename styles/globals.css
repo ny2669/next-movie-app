@@ -296,7 +296,7 @@ margin: 20px auto;
 .bd-img{
 
   position: relative;
-  width: 100Vw;
+  width: 100vw;
   height: 100vh;
   z-index: -88;
 
@@ -316,6 +316,8 @@ background-color: black;
 position: absolute;
 bottom:30px;
 padding: 30px;
+
+
 
 
  
@@ -402,6 +404,7 @@ padding: 5px 15px;
 .darkBg{
 
   color:white;
+  display: block;
   
 }
 
