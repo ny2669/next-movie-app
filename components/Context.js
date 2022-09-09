@@ -1,31 +1,31 @@
-import React, {createContext, useState, useEffect} from 'react'
-const Context = createContext()
+// import React, {createContext, useState, useEffect} from 'react'
+// const Context = createContext()
 
 
-const ContextProvider = ({children, movies}) => {
+// const ContextProvider = ({children, movies}) => {
 
-  const [mList, setMList] = useState([])
+//   const [mList, setMList] = useState([])
 
-// functions
+// // functions
 
-useEffect(() =>{
+// useEffect(() =>{
 
-  const movieList = (movies) =>{
+//   const movieList = (movies) =>{
 
-    return setMList(movies.results)
-  }
+//     return setMList(movies.results)
+//   }
 
-},[])
+// },[])
 
 
-  return (
-   <Context.Provider value={{mList, movies}}>
-{children}
-   </Context.Provider>
-  )
-}
+//   return (
+//    <Context.Provider value={{mList, movies}}>
+// {children}
+//    </Context.Provider>
+//   )
+// }
 
-export {ContextProvider, Context}
+// export {ContextProvider, Context}
 
 
 // export async function getServerSideProps(context) {
