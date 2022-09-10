@@ -17,7 +17,7 @@ const TVshows = ({show}) => {
     <Link href={`/tv/${show.id}`}>
     <div className='card'>
        
-        { <img src={`https://image.tmdb.org/t/p/w500${show.poster_path} `} alt='/'/> }
+        { <Image src={`https://image.tmdb.org/t/p/w500${show.poster_path} `} width={200} height={200} alt='/'/> }
  
     </div>
     </Link>
