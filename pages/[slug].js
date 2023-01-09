@@ -12,9 +12,9 @@ export const getStaticPaths = async () => {
 const data = await res.json()
 const paths = data.results.map(movies => {
 
-  return{
-    params:{slug : movies.id.toString()}
-  }
+return{
+  params:{slug : movie.id.toString()}
+}
 
 })
 
@@ -30,7 +30,7 @@ fallback: false,
 
 
 export const getStaticProps = async (context) => {
-  const id = context.params.slug
+ const id = parseInt(context.params.slug, 10)
   const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_APIKEY}&append_to_response=videos`)
   const data = await res.json()
 
@@ -59,7 +59,7 @@ export default function Details({movie}) {
   return(
 <section className='darkBg'>
 
-<Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path || movie.poster_path}`} alt={movie.title} layout='fill' objectFit="fill" objectPosition={'center'} className='bd-img'/>
+<img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path || movie.poster_path}`} alt={movie.title} className='bd-img' />
     <div className="detailImg">
 
 <h1 className="detailsTitle" key={movie.id}>{movie.title}</h1>
